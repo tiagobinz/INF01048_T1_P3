@@ -124,7 +124,7 @@ iterations = int(sys.argv[2])
 data = np.genfromtxt(dataFile, delimiter=',')
 
 # Execute function
-theta_0, theta_1 = gradient_descent(data, starting_theta_0=1, starting_theta_1=0., learning_rate=0.0001, num_iterations=iterations)
+theta_0, theta_1 = gradient_descent(data, starting_theta_0=0, starting_theta_1=0, learning_rate=0.0001, num_iterations=iterations)
 
 #Imprimir parâmetros otimizados
 print ('theta_0: ', theta_0)
