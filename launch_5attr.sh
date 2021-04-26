@@ -1,1 +1,1 @@
-python 2attr.py $1 $2
+python 5attr.py $1 $2
