@@ -69,7 +69,7 @@ def step_gradient(theta_0_current, theta_1_current, theta_2_current, data, alpha
     for i in range(0, len(x)):
         x[i] = (x[i]-xmin)/(xmax-xmin)
 
-    # para normalizar o valor de 
+    # para normalizar o valor de OverallQual
     wmin = min(w)
     wmax = max(w)
     for i in range(0, len(w)):

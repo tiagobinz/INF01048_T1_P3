@@ -35,19 +35,19 @@ def compute_cost(theta_0, theta_1, theta_2, theta_3, theta_4, theta_5, data):
     for i in range(0, len(w)):
         w[i] = (w[i]-wmin)/(wmax-wmin)
 
-    # para normalizar o valor de OverallQual
+    # para normalizar o valor de OverallCond
     vmin = min(v)
     vmax = max(v)
     for i in range(0, len(v)):
         v[i] = (v[i]-vmin)/(vmax-vmin)
 
-    # para normalizar o valor de OverallQual
+    # para normalizar o valor de GarageArea
     umin = min(u)
     umax = max(u)
     for i in range(0, len(u)):
         u[i] = (u[i]-umin)/(umax-umin)
 
-    # para normalizar o valor de OverallQual
+    # para normalizar o valor de YearBuilt
     zmin = min(z)
     zmax = max(z)
     for i in range(0, len(z)):
@@ -93,25 +93,25 @@ def step_gradient(theta_0_current, theta_1_current, theta_2_current, theta_3_cur
     for i in range(0, len(x)):
         x[i] = (x[i]-xmin)/(xmax-xmin)
 
-    # para normalizar o valor de 
+    # para normalizar o valor de OverallQual
     wmin = min(w)
     wmax = max(w)
     for i in range(0, len(w)):
         w[i] = (w[i]-wmin)/(wmax-wmin)
     
-    # para normalizar o valor de OverallQual
+    # para normalizar o valor de OverallCond
     vmin = min(v)
     vmax = max(v)
     for i in range(0, len(v)):
         v[i] = (v[i]-vmin)/(vmax-vmin)
 
-    # para normalizar o valor de OverallQual
+    # para normalizar o valor de GarageArea
     umin = min(u)
     umax = max(u)
     for i in range(0, len(u)):
         u[i] = (u[i]-umin)/(umax-umin)
 
-    # para normalizar o valor de OverallQual
+    # para normalizar o valor de YearBuilt
     zmin = min(z)
     zmax = max(z)
     for i in range(0, len(z)):
@@ -200,9 +200,9 @@ theta_0, theta_1, theta_2, theta_3, theta_4, theta_5 = gradient_descent(data, st
 print ('theta_0: ', theta_0)
 print ('theta_1: ', theta_1)
 print ('theta_2: ', theta_2)
-print ('theta_2: ', theta_3)
-print ('theta_2: ', theta_4)
-print ('theta_2: ', theta_5)
+print ('theta_3: ', theta_3)
+print ('theta_4: ', theta_4)
+print ('theta_5: ', theta_5)
 
 #Imprimir erro com os parâmetros otimizados
 print ('Erro quadratico medio: ', compute_cost(theta_0, theta_1, theta_2, theta_3, theta_4, theta_5, data))
